@@ -1,0 +1,10 @@
+tap "FelixKratz/formulae"
+
+brew "fish"
+brew "jq"
+brew "neovim"
+brew "sketchybar"
+
+cask "font-hack-nerd-font"
+cask "kitty"
+cask "omniwm"
