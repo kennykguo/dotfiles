@@ -1,5 +1,8 @@
 # SSH configuration
 
+For a step-by-step walkthrough, see
+[Passwordless UG SSH access from Arch Linux](../docs/setup/arch-ug-ssh.md).
+
 `config` is a copy of Kenny's SSH config, including `ecf`, `ug177`, `ug178`,
 `wsl`, `frenchables`, and `jetson`. The UG aliases connect through ECF using
 `ProxyJump`, so `ssh ug177` works from off campus without a separate manual
