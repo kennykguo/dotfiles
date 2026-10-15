@@ -59,6 +59,8 @@ for dotfile in .gitconfig .zprofile .zshrc; do
   link_config "$macos_dir/$dotfile" "$HOME/$dotfile"
 done
 
+bash "$macos_dir/../ssh/setup.sh" --config-only
+
 chmod +x "$macos_dir/.config/sketchybar/sketchybarrc" \
   "$macos_dir/.config/sketchybar/plugins/"*.sh
 

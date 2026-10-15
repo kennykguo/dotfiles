@@ -1,0 +1,6 @@
+# Only portable configuration and setup instructions belong here.
+*
+!.gitignore
+!config
+!README.md
+!setup.sh

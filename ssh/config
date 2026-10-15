@@ -1,0 +1,41 @@
+Host wsl
+  HostName gpussh.ddns.net
+  User kennykguo
+  Port 2222
+  IdentityFile ~/.ssh/id_rsa
+
+Host ecf remote.ecf.utoronto.ca
+  HostName remote.ecf.utoronto.ca
+  User guokenny
+  ControlMaster auto
+  ControlPath ~/.ssh/cm-%C
+  ControlPersist 10m
+
+Host ug178 ug178.eecg.toronto.edu
+  HostName ug178.eecg.toronto.edu
+  User guokenny
+  ProxyJump ecf
+  ControlMaster auto
+  ControlPath ~/.ssh/cm-%C
+  ControlPersist 10m
+
+Host ug177 ug177.eecg.toronto.edu
+  HostName ug177.eecg.toronto.edu
+  User guokenny
+  ProxyJump ecf
+  IdentityFile ~/.ssh/id_ed25519
+  ControlMaster auto
+  ControlPath ~/.ssh/cm-%C
+  ControlPersist 10m
+
+Host frenchables
+  HostName 10.0.0.214
+  User frenchables
+  IdentityFile ~/.ssh/id_rsa  # If using SSH keys
+
+
+Host jetson
+  HostName 192.168.55.1
+  User kennykguo
+  RequestTTY force
+  RemoteCommand TERM=xterm-256color bash

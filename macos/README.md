@@ -9,6 +9,7 @@ This folder contains the shared macOS configuration for:
 - Fish and Zsh
 - Nix client settings
 - Git
+- SSH aliases for ECF, UG machines, and personal hosts
 
 The existing Linux/Hyprland configuration remains at the repository root.
 
@@ -32,6 +33,11 @@ recent Homebrew release asks whether to trust that tap, review it and run
 The installer uses symlinks so repository changes apply immediately. Existing
 targets are moved to a timestamped directory under `~/.dotfiles-backup` before
 links are created.
+
+SSH configuration is shared with Linux/WSL under [`../ssh`](../ssh/README.md).
+Its installer backs up an existing SSH config under `~/.ssh/` and links only
+the config. For passwordless ECF/UG access on a new computer, also run
+`bash ~/dotfiles/ssh/setup.sh` and enter the account passwords when prompted.
 
 ## Required macOS setup
 
